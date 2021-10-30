@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import Colors from './Colors';
 
 export default createGlobalStyle`
     *{
@@ -9,7 +10,7 @@ export default createGlobalStyle`
 
     body{
         font-family: 'Roboto', sans-serif;
-        background-color: #181818;
+        background-color:${Colors.bgColor};
         color: #fff;
     }
 
@@ -20,5 +21,10 @@ export default createGlobalStyle`
 
     li{
         list-style: none;
+    }
+
+    button{
+        cursor: pointer;
+        border: none;
     }
 `;

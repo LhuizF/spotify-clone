@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: '' // API
+    baseURL: 'https://api.spotify.com/v1/'
 });
