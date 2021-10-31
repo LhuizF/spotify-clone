@@ -1,7 +1,15 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import Colors from './Colors';
+import BlackSignature from '../fonts/BlackSignature.otf';
 
 export default createGlobalStyle`
+    @font-face{
+        font-family: 'BlackSignature';
+        src: local('Font Name'), local('FontName'),
+        url(${BlackSignature}) format('truetype');;
+        font-weight: 300;
+        font-style: normal;
+    }
     *{
         margin: 0;
         padding: 0;

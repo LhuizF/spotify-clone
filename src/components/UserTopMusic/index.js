@@ -12,32 +12,38 @@ export default function UserTopMusic() {
         <div className="top-music-container">
             <h3>Músicas mais tocadas este mês</h3>
             <TopMusic>
-                {items
-                    ? items.map((music, i) => (
-                          <div className="music-card" key={i}>
-                              <p className="music-id">{i + 1}</p>
-                              <div className="music-image-name-artist-container">
-                                  <img src={music.album.images[2].url} alt="" />
-                                  <div>
-                                      <p>{music.name}</p>
-                                      <p>
-                                          {music.artists.map(
-                                              (artist) => artist.name + ' '
-                                          )}
-                                      </p>
-                                  </div>
-                              </div>
-                              <div className="music-album-time-container">
-                                  <p className="music-album-name">
-                                      {music.album.name}
-                                  </p>
-                                  <p className="music-timer">
+                <tbody>
+                    {items
+                        ? items.map((music, i) => (
+                              <tr className="music-card" key={i}>
+                                  <td className="music-id">{i + 1}</td>
+
+                                  <td>
+                                      <div className="music-image-name-artist-container">
+                                          <img
+                                              src={music.album.images[2].url}
+                                              alt=""
+                                          />
+                                          <div>
+                                              <p>{music.name}</p>
+                                              <p>
+                                                  {music.artists.map(
+                                                      (artist) =>
+                                                          artist.name + ' '
+                                                  )}
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </td>
+
+                                  <td>{music.album.name}</td>
+                                  <td className="music-timer">
                                       {getMin(music.duration_ms)}
-                                  </p>
-                              </div>
-                          </div>
-                      ))
-                    : null}
+                                  </td>
+                              </tr>
+                          ))
+                        : null}
+                </tbody>
             </TopMusic>
         </div>
     );

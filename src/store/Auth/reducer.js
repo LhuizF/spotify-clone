@@ -12,7 +12,7 @@ function AuthReducer(state = inicialState, action) {
             return newState;
         }
 
-        case 'RESET_USER': {
+        case 'RESET_TOKEN': {
             const newState = { ...inicialState };
             return newState;
         }

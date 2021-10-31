@@ -1,15 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { HomeContainer } from './styled';
+import { LoginContainer } from './styled';
 
-export default function Home() {
+export default function Login() {
     return (
-        <HomeContainer>
-            <h1>My login Page</h1>
-            <button>
-                <a href="http://localhost:8888"> Logar com spotify</a>
-            </button>
-        </HomeContainer>
+        <LoginContainer>
+            <div className="login">
+                <p>FAKE</p>
+                <img src="https://download.logo.wine/logo/Spotify/Spotify-Logo.wine.png" />
+                <button>
+                    <a href="http://localhost:8888">Fazer login com Spotify</a>
+                </button>
+            </div>
+        </LoginContainer>
     );
 }

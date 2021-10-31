@@ -5,6 +5,7 @@ import { AiOutlinePoweroff } from 'react-icons/ai';
 
 import UserTopMusic from '../../components/UserTopMusic';
 import { NewUser } from '../../store/User/actions';
+import { ResetToken } from '../../store/Auth/actions';
 import axios from '../../service/axios';
 import { HeaderContainer } from './styled';
 
@@ -32,7 +33,12 @@ export default function Home() {
 
     return (
         <HeaderContainer>
-            <button type="button">
+            <button
+                type="button"
+                onClick={() => {
+                    dispatch(ResetToken());
+                }}
+            >
                 logout
                 <AiOutlinePoweroff size={22} color="#d03434" />
             </button>

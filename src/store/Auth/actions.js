@@ -7,7 +7,6 @@ export function NewToken(payload) {
 
 export function ResetToken() {
     return {
-        type: 'RESET_TOKEN',
-        payload
+        type: 'RESET_TOKEN'
     };
 }
