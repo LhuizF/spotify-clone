@@ -10,6 +10,7 @@ export default createGlobalStyle`
         font-weight: 300;
         font-style: normal;
     }
+
     *{
         margin: 0;
         padding: 0;
@@ -20,6 +21,12 @@ export default createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         background-color:${Colors.bgColor};
         color: #fff;
+    }
+
+    main{
+        margin: 22px auto;
+        width: 92%;
+        overflow: hidden;
     }
 
     a{
@@ -34,5 +41,6 @@ export default createGlobalStyle`
     button{
         cursor: pointer;
         border: none;
+        background-color: transparent;
     }
 `;

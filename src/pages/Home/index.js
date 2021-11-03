@@ -3,11 +3,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router';
 import { AiOutlinePoweroff } from 'react-icons/ai';
 
-import UserTopMusic from '../../components/UserTopMusic';
 import { NewUser } from '../../store/User/actions';
 import { ResetToken } from '../../store/Auth/actions';
 import axios from '../../service/axios';
 import { HeaderContainer } from './styled';
+
+import UserTopMusic from '../../components/UserTopMusic';
+import UserPlaylists from '../../components/UserPlaylists';
 
 export default function Home() {
     const history = useHistory();
@@ -34,6 +36,7 @@ export default function Home() {
     return (
         <HeaderContainer>
             <button
+                className="logout"
                 type="button"
                 onClick={() => {
                     dispatch(ResetToken());
@@ -49,6 +52,7 @@ export default function Home() {
 
             <main>
                 <UserTopMusic />
+                <UserPlaylists />
             </main>
         </HeaderContainer>
     );

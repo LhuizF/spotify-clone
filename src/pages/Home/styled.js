@@ -17,7 +17,7 @@ export const HeaderContainer = styled.header`
             border-radius: 100%;
             position: relative;
             margin-top: 90px;
-            border: 2px solid #fff;
+            border: 2px solid ${Colors.mainGreen};
         }
 
         h3 {
@@ -25,12 +25,11 @@ export const HeaderContainer = styled.header`
         }
     }
 
-    button {
+    .logout {
         display: flex;
         align-items: center;
         font-size: 18px;
         color: #fff;
-        background-color: inherit;
         position: absolute;
         top: 20px;
         right: 25px;
