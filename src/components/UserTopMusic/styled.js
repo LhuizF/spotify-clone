@@ -17,3 +17,8 @@ export const TitleContainer = styled.div`
         transition: 300ms ease-in-out;
     }
 `;
+
+export const TableContainer = styled.div`
+    height: 84px;
+    overflow: hidden;
+`;

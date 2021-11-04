@@ -24,9 +24,13 @@ export default createGlobalStyle`
     }
 
     main{
-        margin: 22px auto;
+        margin: 0 auto;
         width: 92%;
         overflow: hidden;
+    }
+
+    section{
+        margin-top: 22px;
     }
 
     a{

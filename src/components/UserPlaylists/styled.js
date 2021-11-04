@@ -3,15 +3,20 @@ import Colors from '../../style/Colors';
 
 export const PlaylistsContainer = styled.div`
     display: flex;
-    align-items: center;
+    flex-direction: column;
     margin-top: 10px;
 
-    .playlist-container {
+    .playlists-container {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
 
-        div {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .playlist {
             background-color: ${Colors.secColor};
             margin: 6px;
             text-align: center;
@@ -19,6 +24,8 @@ export const PlaylistsContainer = styled.div`
             color: ${Colors.mainFont};
             max-width: 100px;
             box-shadow: 0px 4px 2px -1px ${Colors.mainGreen};
+            height: 140px;
+            overflow: hidden;
 
             img {
                 width: 80px;
@@ -33,6 +40,18 @@ export const PlaylistsContainer = styled.div`
                 margin: 8px 0px;
                 color: ${Colors.secFont};
             }
+        }
+    }
+
+    .btn-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            color: ${Colors.mainGreen};
+            font-size: 24px;
+            margin: 0 5px;
         }
     }
 `;

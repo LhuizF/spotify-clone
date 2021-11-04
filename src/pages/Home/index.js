@@ -10,6 +10,7 @@ import { HeaderContainer } from './styled';
 
 import UserTopMusic from '../../components/UserTopMusic';
 import UserPlaylists from '../../components/UserPlaylists';
+import NavBar from '../../components/NavBar';
 
 export default function Home() {
     const history = useHistory();
@@ -53,6 +54,7 @@ export default function Home() {
             <main>
                 <UserTopMusic />
                 <UserPlaylists />
+                <NavBar />
             </main>
         </HeaderContainer>
     );
