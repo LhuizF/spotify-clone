@@ -40,7 +40,7 @@ export default function UserPlaylists() {
                                           src={
                                               playlist.images.length > 0
                                                   ? playlist.images[0].url
-                                                  : 'https://yt3.ggpht.com/MA-CyRyLh_KUVDLYDioiCYyN9nAuVfrTczMWu7Qc5YzUOTkcamMh4s7TiwNL0dhLGJXarm48Pw=s900-c-k-c0x00ffffff-no-rj'
+                                                  : 'https://i.pinimg.com/originals/de/80/f3/de80f396e8d27c19468e2f0bb2411787.png'
                                           }
                                       />
 

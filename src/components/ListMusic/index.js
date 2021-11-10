@@ -16,7 +16,7 @@ export default function ListMusic({ items, open }) {
                               }
 
                               return (
-                                  <tr className="music-card" key={music.id}>
+                                  <tr className="music-card" key={music.id + i}>
                                       <td className="music-id">{i + 1}</td>
                                       <td>
                                           <div className="music-image-name-artist-container">

@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useState } from 'react';
-import { RiArrowUpSLine } from 'react-icons/ri';
+import { RiArrowDownSLine } from 'react-icons/ri';
 
 import useApi from '../../hooks/useApi';
 import ListMusic from '../ListMusic';
-import { TitleContainer, TableContainer } from './styled';
+import { TitleContainer, Button } from './styled';
 
 export default function UserTopMusic() {
     const [open, setOpen] = useState(false);
@@ -14,13 +14,15 @@ export default function UserTopMusic() {
         <section>
             <TitleContainer>
                 <h3>Músicas mais tocadas este mês</h3>
-                <button
+                <Button
+                    open={open}
+                    className="btn-arrow"
                     onClick={() => {
                         setOpen(!open);
                     }}
                 >
-                    <RiArrowUpSLine color="#fff" />
-                </button>
+                    <RiArrowDownSLine color="#fff" />
+                </Button>
             </TitleContainer>
 
             <ListMusic items={items} open={open} />

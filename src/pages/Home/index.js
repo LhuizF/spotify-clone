@@ -10,7 +10,6 @@ import { HeaderContainer } from './styled';
 
 import UserTopMusic from '../../components/UserTopMusic';
 import UserPlaylists from '../../components/UserPlaylists';
-import NavBar from '../../components/NavBar';
 
 export default function Home() {
     const history = useHistory();
@@ -35,27 +34,31 @@ export default function Home() {
     }, [access_token, dispatch]);
 
     return (
-        <HeaderContainer>
-            <button
-                className="logout"
-                type="button"
-                onClick={() => {
-                    dispatch(ResetToken());
+        <>
+            <HeaderContainer>
+                <button
+                    className="logout"
+                    type="button"
+                    onClick={() => {
+                        dispatch(ResetToken());
+                    }}
+                >
+                    logout
+                    <AiOutlinePoweroff size={22} color="#d03434" />
+                </button>
+                <div className="profile-container">
+                    <img src={user.profilePicture} alt="" />
+                    <h3>{user.login}</h3>
+                </div>
+            </HeaderContainer>
+            <main
+                style={{
+                    marginTop: '100px'
                 }}
             >
-                logout
-                <AiOutlinePoweroff size={22} color="#d03434" />
-            </button>
-            <div className="profile-container">
-                <img src={user.profilePicture} alt="" />
-                <h3>{user.login}</h3>
-            </div>
-
-            <main>
                 <UserTopMusic />
                 <UserPlaylists />
-                <NavBar />
             </main>
-        </HeaderContainer>
+        </>
     );
 }

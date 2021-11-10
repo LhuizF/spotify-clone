@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from '../../style/Colors';
 
 export const HeaderContainer = styled.div`
-    height: 100px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,19 +10,15 @@ export const HeaderContainer = styled.div`
     text-align: center;
     background-color: ${Colors.secColor};
     color: ${Colors.mainFont};
+    padding: 10px;
 
-    .back-container {
+    button {
         position: absolute;
-        display: flex;
-        align-items: center;
-        left: 20px;
-        font-size: 24px;
-        height: 100px;
+        left: 25px;
+    }
 
-        img {
-            height: 70px;
-            margin-left: 10px;
-        }
+    img {
+        width: 100px;
     }
 
     p {
@@ -36,7 +32,10 @@ export const HeaderContainer = styled.div`
     }
 `;
 
-export const BtnContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
+export const MusicsPlaylist = styled.main`
+    .btn-container {
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+    }
 `;

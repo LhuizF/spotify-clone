@@ -26,18 +26,22 @@ export const PlaylistsContainer = styled.div`
             box-shadow: 0px 4px 2px -1px ${Colors.mainGreen};
             height: 140px;
             overflow: hidden;
+            padding: 5px 10px;
 
             img {
                 width: 80px;
                 height: 80px;
                 object-fit: cover;
                 border-radius: 20px;
-                margin: 5px 10px;
+                background-color: #282828;
+            }
+
+            p {
+                margin-top: 8px;
             }
 
             .playlist-description {
                 font-size: 10px;
-                margin: 8px 0px;
                 color: ${Colors.secFont};
             }
         }

@@ -21,7 +21,7 @@ export default function useApi(call, path, ...args) {
                 setResponse(response.data);
             } catch (e) {
                 console.log(e);
-                // history.push('/');
+                history.push('/');
             }
         }
 

@@ -5,6 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Routes from './routes';
 import GlobalStyle from './style/GlobalStyles';
 import { store, persistor } from './store';
+import Playing from './components/Playing';
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <BrowserRouter>
                     <Routes />
                     <GlobalStyle />
+                    <Playing />
                 </BrowserRouter>
             </PersistGate>
         </Provider>
