@@ -14,6 +14,7 @@ export const LoginContainer = styled.div`
         color: red;
         transform: rotate(-22deg);
         font-family: 'BlackSignature';
+        user-select: none;
     }
 
     .login {

@@ -20,7 +20,6 @@ module.exports = {
     },
     plugins: ['react'],
     rules: {
-        'no-console': 'off',
         'react/jsx-filename-extension': 'off',
         'react/prop-types': [0]
     }

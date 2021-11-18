@@ -12,13 +12,13 @@ export default function useApi(call, path, ...args) {
     useEffect(() => {
         async function getData() {
             try {
-                const response = await axios[call](path + '?' + arg, {
+                const { data } = await axios[call](path + '?' + arg, {
                     headers: {
                         Authorization: `Bearer ${access_token}`
                     }
                 });
 
-                setResponse(response.data);
+                setResponse(data);
             } catch (e) {
                 console.log(e);
                 history.push('/');
